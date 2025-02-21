@@ -1,0 +1,26 @@
+<div class="task-container">
+    <div class="task-form-container">
+      <app-task-form
+        [taskToEdit]="selectedTask"
+        (addTask)="addTask($event)"
+        (updateTask)="updateTask($event)"
+        (cancelEdit)="cancelEdit()">
+      </app-task-form>
+    </div>
+  
+    <div class="task-list-container">
+      <h2>Mis Tareas ({{ tasks.length }})</h2>
+      
+      <div *ngIf="tasks.length === 0" class="no-tasks-message">
+        No hay tareas. ¡Agrega una nueva!
+      </div>
+      
+      <app-task-item
+        *ngFor="let task of tasks"
+        [task]="task"
+        (editTask)="selectTaskToEdit($event)"
+        (deleteTask)="deleteTask($event)"
+        (toggleComplete)="toggleTaskCompletion($event)">
+      </app-task-item>
+    </div>
+  </div>

@@ -1,0 +1,31 @@
+.task-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .no-tasks-message {
+    text-align: center;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 4px;
+    color: midnightblue;
+  }
+  
+  @media (min-width: 768px) {
+    .task-container {
+      flex-direction: row;
+    }
+    
+    .task-form-container {
+      flex: 1;
+      position: sticky;
+      top: 20px;
+      max-height: calc(100vh - 40px);
+    }
+    
+    .task-list-container {
+      flex: 2;
+    }
+  }

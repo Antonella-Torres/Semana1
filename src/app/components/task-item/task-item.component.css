@@ -1,0 +1,30 @@
+.task-card {
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .completed {
+    background-color: rgba(0, 128, 0, 0.1);
+  }
+  
+  .completed-text {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-actions {
+    display: flex;
+  }
+  
+  .task-description {
+    margin-top: 8px;
+    margin-left: 32px;
+    color: #666;
+    font-size: 14px;
+  }
